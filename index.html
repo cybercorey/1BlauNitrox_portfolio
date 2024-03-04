@@ -289,7 +289,7 @@
                   </div>
                </form>
                <div class="contact-image-container">
-                  <IMG SRC="contact.gif">
+                  <img id="contact-gif" src="contact_entrance.gif">
                </div>
             </div>
       </div>
@@ -304,6 +304,31 @@
                });
             });
          });
+
+         // Function to be called when the target element is intersecting
+         function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                  observer.disconnect();
+                  setTimeout(() => { 
+                     document.getElementById('contact-gif').src = "contact_loop.gif";
+                  }, 2500);
+               }
+            });
+         }
+
+         const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0
+         };
+
+         const observer = new IntersectionObserver(handleIntersection, options);
+
+         const targetImg = document.getElementById('contact-gif');
+
+         observer.observe(targetImg);
+
       </script>
       <script defer src="fade-in.js"></script>
       <script defer src="text-animation.js"></script>

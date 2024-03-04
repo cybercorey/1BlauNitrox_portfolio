@@ -64,43 +64,43 @@ body {
 
 .container {
     position: relative;
-    width: 90%;
+    width: 95%;
     margin: 20px 0;
     background-color: #fff;
     border-radius: 20px;
     z-index: 2;
+    overflow: hidden;
 }
 
 .landing-page {
-    min-height: 90vh;
+    min-height: 80vh;
     width: 100%;
-    padding: 50px;
-    padding-bottom: 0;
+    padding: 0 50px;
 }
 
 .navigation {
-    width: 100%;
-    padding: 20px 40px;
+    width: 80%;
     font-size: 22px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    margin: 0 auto;
 }
 
 .nav-about {
-    animation: move-in-right 0.2s ease-in 2.7s backwards;
+    animation: move-in-right 0.2s ease-in 2.3s backwards;
 }
 
 .nav-skills {
-    animation: move-in-right 0.2s ease-in 2.8s backwards;
+    animation: move-in-right 0.2s ease-in 2.4s backwards;
 }
 
 .nav-work{
-    animation: move-in-right 0.2s ease-in 2.9s backwards;
+    animation: move-in-right 0.2s ease-in 2.5s backwards;
 } 
 
 .nav-contact {
-    animation: move-in-right 0.2s ease-in 3s backwards;
+    animation: move-in-right 0.2s ease-in 2.6s backwards;
 }
 
 .navigation div:not(:last-child) {
@@ -130,7 +130,7 @@ body {
 
 .landing-page-content {
     width: 80%;
-    margin: 120px auto 0 auto;
+    margin: 40px auto 0 auto;
     font-size: 35px;
 
     display: flex;
@@ -146,7 +146,7 @@ body {
     margin-top: 10px;
     line-height: 1.6;
     font-size: 25px;
-    animation: move-in-left 0.5s ease-in 1.8s backwards;
+    animation: move-in-left 0.5s ease-in 1.3s backwards;
 }
 
 .landing-page-content-image-container {
@@ -154,7 +154,7 @@ body {
     width: 50%;
     display: flex;
     justify-content: end;
-    animation: move-in-right 0.5s ease-in 2.2s backwards;
+    animation: move-in-right 0.5s ease-in 1.7s backwards;
 }
 
 .landing-page-content-image {
@@ -170,7 +170,7 @@ body {
 
 .landing-page-content-buttons {
     margin-top: 40px;
-    animation: move-in-bottom 0.5s ease-in 1.8s backwards;
+    animation: move-in-bottom 0.5s ease-in 1.7s backwards;
 }
 
 .section {
@@ -184,9 +184,15 @@ body {
     bottom: -10px;
 }
 
+.section-transition-top {
+    width: 100%;
+    position: relative;
+    top: -10px;
+}
+
 .section-heading {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     color: #fff;
 }
 
@@ -227,6 +233,86 @@ body {
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1650px) {
+    .navigation {
+        width: 100%;
+    }
+
+    .landing-page-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .landing-page-content {
+        flex-direction: column-reverse;
+    }
+
+    .landing-page-content-image-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .landing-page-content-image {
+        height: 450px;
+    }
+
+    .landing-page-content-text-container {
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .landing-page-content-image-container {
+        animation: move-in-right 0.5s ease-in 0.7s backwards;
+    }
+
+    .nav-about {
+        animation: move-in-right 0.2s ease-in 1.3s backwards;
+    }
+    
+    .nav-skills {
+        animation: move-in-right 0.2s ease-in 1.4s backwards;
+    }
+    
+    .nav-work{
+        animation: move-in-right 0.2s ease-in 1.5s backwards;
+    } 
+    
+    .nav-contact {
+        animation: move-in-right 0.2s ease-in 1.6s backwards;
+    }
+}
+
+@media only screen and (max-width: 800px) { 
+    .backgorund {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 555px) { 
+    .navigation div:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .navigation {
+        justify-content: space-around
+    } 
+
+    .landing-page {
+        padding: 30px;
+    }
+
+    .landing-page-content-image {
+        height: 300px;
     }
 }
 
@@ -355,12 +441,14 @@ body {
 .project-description h3 {
     font-size: 22px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .project-description h5 {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
+    color: #fff;
 }
 
 /* 1500px BREAK POINT

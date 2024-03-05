@@ -47,12 +47,24 @@ body {
 
 .btn {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 30px;
     font-size: 20px;
     cursor: pointer;
     text-decoration: none;
     width: fit-content;
+    border: 1px solid rgb(103, 103, 255);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    transform: translateY(-1px);
 }
 
 .btn-filled {
@@ -60,10 +72,23 @@ body {
    color: #fff;
 }
 
+.btn-filled:hover svg {
+    fill: rgb(103, 103, 255);
+ }
+
+.btn-filled:hover {
+    background-color: #fff;
+    color: rgb(103, 103, 255);
+ }
+
 .btn-outline {
-    border: 1px solid rgb(103, 103, 255);
     color: rgb(103, 103, 255);
 }
+
+.btn-outline:hover {
+    background-color: rgb(103, 103, 255);
+    color: #fff;
+ }
 
 .container {
     position: relative;
@@ -344,6 +369,18 @@ body {
 
     .landing-page-content-text h5 {
         font-size: 22px;
+    }
+    
+    #rocket {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .landing-page-content-buttons a {
+        font-size: 16px;
+        padding: 10px 15px;
     }
 }
 

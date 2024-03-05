@@ -57,3 +57,12 @@ function validateValue(element, identifier) {
         return true; 
     }
 }
+
+function copyDiscord() {
+    navigator.clipboard.writeText('1blaunitr0x');
+    let tooltip = document.getElementById('tooltip-text');
+    tooltip.innerText = "Copied!"
+    setTimeout(function() {
+        tooltip.innerText = "Copy Tag";
+    }, 1500);
+}

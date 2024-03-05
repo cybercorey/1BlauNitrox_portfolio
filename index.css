@@ -187,6 +187,12 @@ body {
     padding: 100px 50px 75px 50px;
 }
 
+@media screen and (max-width: 530px) { 
+    .section {
+        padding: 100px 30px 75px 30px;
+    }
+}
+
 .section-transition {
     width: 100%;
     position: relative;
@@ -326,6 +332,21 @@ body {
     }
 }
 
+@media screen and (max-width: 412px) { 
+    .btn {
+        font-size: 18px;
+        padding: 10px 25px;
+    }
+
+    .landing-page-content-text h2 {
+        font-size: 35px;
+    }
+
+    .landing-page-content-text h5 {
+        font-size: 22px;
+    }
+}
+
 /**  ABOUT ME */
 .about-me {
     background-color: rgb(103, 103, 255);
@@ -403,10 +424,22 @@ body {
 
 .skill-level {
     display: block;
-     margin-top: 20px;
+    margin-top: 20px;
 }
 
-/* BREAK POINT 530px
+@media screen and (max-width: 430px) { 
+    .skill { 
+        padding: 30px;    
+    }
+
+    .skill-heading {
+        font-size: 22px;
+    }
+    
+    .skill-description {
+        font-size: 18px;
+    }
+}
 
 
 /**  WORK */
@@ -492,19 +525,22 @@ body {
     max-width: 500px;
     width: 100%;
     gap: 10px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
 }
 
-.form-input {
-    border-bottom: 1px solid #000;
+.form-submit-container {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    max-width: 500px;
+    width: 100%;
 }
 
 .form-input.error {
     border-bottom: 1px solid red;
 }
 
-.form-input {
-    margin-bottom: 40px;
-}
 
 .form-input label {
     position: absolute;
@@ -686,6 +722,10 @@ body {
     }
 
     .form-input {
+        max-width: 600px;
+    }
+
+    .form-submit-container {
         max-width: 600px;
     }
 }

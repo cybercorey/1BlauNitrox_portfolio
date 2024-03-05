@@ -19,10 +19,13 @@ function formhash() {
     }
 
     if(error) {
-        alert("error");
         return false;
     }
 
+    paperPlane.classList.add("paperplane-flying");
+    setTimeout(function() {
+        paperPlane.classList.remove("paperplane-flying");
+    }, 2000);
     return true;
 }
 

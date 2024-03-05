@@ -227,15 +227,15 @@
          <div class="contact section" id="contact">
             <div class="section-heading section-heading-blue"><h3>Let's get in touch!</h3></div>
             <div class="contact-form">
-               <form action="post">
+               <form>
                   <div class="form-input">
-                     <input type="text" name="name" required>
+                     <input id="name" type="text" name="name" onfocusout="validateValue(this, 'name')" required>
                      <div class="underline"></div>
                      <label for="name">Name</label>
-                     <svg id="light" class="input-icon" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m21.5 21h-19c-1.378 0-2.5-1.122-2.5-2.5v-13c0-1.378 1.122-2.5 2.5-2.5h19c1.378 0 2.5 1.122 2.5 2.5v13c0 1.378-1.122 2.5-2.5 2.5zm-19-17c-.827 0-1.5.673-1.5 1.5v13c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-13c0-.827-.673-1.5-1.5-1.5z"/></g><g><path d="m7.5 12c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z"/></g><g><path d="m11.5 17c-.276 0-.5-.224-.5-.5v-1c0-.827-.673-1.5-1.5-1.5h-4c-.827 0-1.5.673-1.5 1.5v1c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-1c0-1.378 1.122-2.5 2.5-2.5h4c1.378 0 2.5 1.122 2.5 2.5v1c0 .276-.224.5-.5.5z"/></g><g><path d="m20.5 9h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m20.5 13h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m20.5 17h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g></svg>
+                     <svg id="light" class="input-icon" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m21.5 21h-19c-1.378 0-2.5-1.122-2.5-2.5v-13c0-1.378 1.122-2.5 2.5-2.5h19c1.378 0 2.5 1.122 2.5 2.5v13c0 1.378-1.122 2.5-2.5 2.5zm-19-17c-.827 0-1.5.673-1.5 1.5v13c0 .827.673 1.5 1.5 1.5h19c.827 0 1.5-.673 1.5-1.5v-13c0-.827-.673-1.5-1.5-1.5z"/></g><g><path d="m7.5 12c-1.378 0-2.5-1.122-2.5-2.5s1.122-2.5 2.5-2.5 2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5zm0-4c-.827 0-1.5.673-1.5 1.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5-.673-1.5-1.5-1.5z"/></g><g><path d="m11.5 17c-.276 0-.5-.224-.5-.5v-1c0-.827-.673-1.5-1.5-1.5h-4c-.827 0-1.5.673-1.5 1.5v1c0 .276-.224.5-.5.5s-.5-.224-.5-.5v-1c0-1.378 1.122-2.5 2.5-2.5h4c1.378 0 2.5 1.122 2.5 2.5v1c0 .276-.224.5-.5.5z"/></g><g><path d="m20.5 9h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m20.5 13h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g><g><path d="m20.5 17h-6c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h6c.276 0 .5.224.5.5s-.224.5-.5.5z"/></g></svg>                    
                   </div>
                   <div class="form-input">
-                     <input type="text" name="email" required>
+                     <input id="email" type="text" name="email" onfocusout="validateValue(this, 'email')" required>
                      <div class="underline"></div>
                      <label for="email">Email</label>
                      <svg class="input-icon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -282,14 +282,20 @@
                      </svg>
                   </div>
                   <div class="form-input">
-                     <textarea type="text" name="message" rows="1" required></textarea>
+                     <textarea id="message" type="text" name="message" onfocusout="validateValue(this, 'message')" rows="1" required></textarea>
                      <div class="underline"></div>
-                     <svg class="input-icon" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Layer_2" data-name="Layer 2"><path d="m2.87 28.56a1.88 1.88 0 0 1 -1.87-1.87v-15.38a3.88 3.88 0 0 1 3.87-3.87h18.25a3.88 3.88 0 0 1 3.88 3.87v10.25a3.88 3.88 0 0 1 -3.87 3.88h-15.22a.82.82 0 0 0 -.48.16l-3.43 2.59a1.89 1.89 0 0 1 -1.13.37zm2-19.12a1.88 1.88 0 0 0 -1.87 1.87v15.13l3.23-2.44a2.84 2.84 0 0 1 1.68-.56h15.21a1.88 1.88 0 0 0 1.88-1.88v-10.25a1.88 1.88 0 0 0 -1.87-1.87z"/><circle cx="17.94" cy="16.53" r="1"/><circle cx="14.06" cy="16.53" r="1"/><circle cx="10.06" cy="16.53" r="1"/><path d="m30 18.44a1 1 0 0 1 -1-1v-10.13a1.88 1.88 0 0 0 -1.87-1.87h-20.13a1 1 0 0 1 -1-1 1 1 0 0 1 1-1h20.13a3.88 3.88 0 0 1 3.87 3.87v10.13a1 1 0 0 1 -1 1z"/></g></svg>
                      <label for="message">Message</label>
+                     <svg class="input-icon" height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg"><g id="Layer_2" data-name="Layer 2"><path d="m2.87 28.56a1.88 1.88 0 0 1 -1.87-1.87v-15.38a3.88 3.88 0 0 1 3.87-3.87h18.25a3.88 3.88 0 0 1 3.88 3.87v10.25a3.88 3.88 0 0 1 -3.87 3.88h-15.22a.82.82 0 0 0 -.48.16l-3.43 2.59a1.89 1.89 0 0 1 -1.13.37zm2-19.12a1.88 1.88 0 0 0 -1.87 1.87v15.13l3.23-2.44a2.84 2.84 0 0 1 1.68-.56h15.21a1.88 1.88 0 0 0 1.88-1.88v-10.25a1.88 1.88 0 0 0 -1.87-1.87z"/><circle cx="17.94" cy="16.53" r="1"/><circle cx="14.06" cy="16.53" r="1"/><circle cx="10.06" cy="16.53" r="1"/><path d="m30 18.44a1 1 0 0 1 -1-1v-10.13a1.88 1.88 0 0 0 -1.87-1.87h-20.13a1 1 0 0 1 -1-1 1 1 0 0 1 1-1h20.13a3.88 3.88 0 0 1 3.87 3.87v10.13a1 1 0 0 1 -1 1z"/></g></svg>     
                   </div>
+                  <a class="btn btn-filled form-submit" onclick="formhash()">Submit
+                     <svg id="paperplane" enable-background="new 0 0 24 24" fill="green" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m8.75 17.612v4.638c0 .324.208.611.516.713.077.025.156.037.234.037.234 0 .46-.11.604-.306l2.713-3.692z"/>
+                        <path d="m23.685.139c-.23-.163-.532-.185-.782-.054l-22.5 11.75c-.266.139-.423.423-.401.722.023.3.222.556.505.653l6.255 2.138 13.321-11.39-10.308 12.419 10.483 3.583c.078.026.16.04.242.04.136 0 .271-.037.39-.109.19-.116.319-.311.352-.53l2.75-18.5c.041-.28-.077-.558-.307-.722z"/>
+                    </svg>                    
+                  </a>                  
                </form>
                <div class="contact-image-container">
-                  <img id="contact-gif" src="contact_entrance.gif">
+                  <img id="contact-gif" src="gif/contact_entrance.gif">
                </div>
             </div>
       </div>
@@ -311,7 +317,7 @@
                if (entry.isIntersecting) {
                   observer.disconnect();
                   setTimeout(() => { 
-                     document.getElementById('contact-gif').src = "contact_loop.gif";
+                     document.getElementById('contact-gif').src = "gif/contact_loop.gif";
                   }, 2500);
                }
             });
@@ -324,13 +330,12 @@
          };
 
          const observer = new IntersectionObserver(handleIntersection, options);
-
          const targetImg = document.getElementById('contact-gif');
-
-         observer.observe(targetImg);
+         observer.observe(targetImg); 
 
       </script>
-      <script defer src="fade-in.js"></script>
-      <script defer src="text-animation.js"></script>
+      <script defer src="scripts/fade-in.js"></script>
+      <script defer src="scripts/text-animation.js"></script>
+      <script defer src="scripts/contact.js"></script>
    </body>
 </html>

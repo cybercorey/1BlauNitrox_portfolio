@@ -573,7 +573,7 @@ body {
 
 .project-images img {
     width: 45%;
-    max-height: 200px;
+    max-height: 300px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4);
     border-radius: 10px;
     object-fit: cover;
@@ -583,23 +583,23 @@ body {
 
 .project-images img:hover {
     z-index: 3;
-    transform: scale(1.05);
+    transform: scale(1.2);
 }
 
 .project-images img:nth-child(1) {
     left: 3rem;
-    top: -2rem;
+    top: 2rem;
 }
 
 .project-images img:nth-child(2) {
     right: 4rem;
-    top: 2rem;
+    top: 6rem;
     z-index: 2;
 }
 
 .project-images img:nth-child(3) {
     left: 20%;
-    top: 8rem;
+    top: 12rem;
 }
 
 .project-description {
@@ -641,8 +641,7 @@ body {
     .project-images {
         width: 100%;
         max-width: 800px;
-        margin-top: 80px;
-        min-height: 350px;
+        margin-top: 30px;
     }
 
     .project-description {
@@ -657,6 +656,10 @@ body {
 
     .project-description {
         width: 100%;
+    }
+
+    .project-images {
+        margin-top: 80px;
     }
 
     .project-images img {

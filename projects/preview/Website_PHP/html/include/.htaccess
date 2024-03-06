@@ -1,0 +1,46 @@
+Options -Indexes
+
+<Files "config.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "db_connect.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "deviceAPI.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "footer.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "functions.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "hash.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "mailer.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "navigation.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "rest.php">  
+  Order Allow,Deny
+  Deny from all
+</Files>

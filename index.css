@@ -729,8 +729,25 @@ body {
         top: 2rem;
         z-index: 2;
     }
-    
+}
 
+@media screen and (max-width: 470px) {
+    .project-images img {
+        width: 55%;
+        max-width: 200px;
+        max-height: 120px;
+    }
+
+    .project-images img:nth-child(1) {
+        left: 0rem;
+        top: 0rem;
+    }
+    
+    .project-images img:nth-child(2) {
+        right: 0rem;
+        top: 2rem;
+        z-index: 2;
+    }
 }
 
 /**  CONTACT */

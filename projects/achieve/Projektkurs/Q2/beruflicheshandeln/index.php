@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="../../css/navigation.css">
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/index.css">
+
+        <title>Projektkurs | Home</title>
+
+        <!-- Icons -->
+        <script src="https://kit.fontawesome.com/b5259bc025.js" crossorigin="anonymous"></script>
+    </head>
+    <body onresize="checkResize()">
+        
+        <!--  Fullsite Navigation  --> 
+        <nav role="navigation" id="navigation">
+            <div class="icon-container">
+                <img src="../../img/Projektkurs_Logo.png" alt="Icon" id="icon">
+            </div>
+            <ul class="nav-items">
+                <li class="nav-item" id="project"><a id="nav-project" href="index.php"><i class="fas fa-regular fa-diagram-project" id="nav-icon"></i>Projekt</a></li>
+                <li class="nav-item" id="survey"><a id="nav-survey"  href="survey.php"><i class="fa-solid fa-square-poll-vertical" id="nav-icon"></i>Umfrage</a></li>
+            </ul>
+        </nav>
+
+        <!--  Collapsed Navigation  --> 
+        <nav role="navigation" id="navigation-collapsed" class="navigation-collapsed">
+            <img src="../../img/Projektkurs_Logo.png" alt="Icon" class="nav-icon-collapsed" id="icon">
+            <hr class="nav-hr-collapsed">
+            <ul class="nav-items-collapsed">
+                <li class="nav-item-collapsed" id="project-collapsed"><a id="nav-project-collapsed" href="index.php"><i class="fas fa-regular fa-diagram-project" id="nav-icon-collapsed"></i>Projekt</a></li>
+                <li class="nav-item-collapsed" id="survey-collapsed"><a id="nav-survey-collapsed" href="survey.php"><i class="fa-solid fa-square-poll-vertical" id="nav-icon-collapsed"></i></i>Umfrage</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu" id="menu" onclick="toggle()">
+            <a id="menu-open"><i class="fa fa-bars"></i></a>
+            <a id="menu-close"><i class="fas fa-times"></i></a>
+        </div>
+
+        <div class="section header">
+            <div class="heading">
+                <h1>Projektkurs am TFG 2022/2023</h1>
+                <h3>Auf dieser Website ist unser Projekt mit dem CDU-Politiker Herrn Thomas Jarzombek digital dargestellt. Hier wird unser Arbeitsprozess erklärt und vor allem die Auswertung unserer Umfrage und die Ergebnisse des gesamten Projektes veranschaulicht.</h3>
+            </div>
+        </div>
+
+        <div class="section about">
+            <h2 class="section-heading blue">Unser Projekt</h2>
+
+            <div class="about-content fade-in">
+                <div class="project-idea">
+                    <div class="about-heading">
+                        <h3>Projektidee</h3>
+                    </div>
+                    <div class="idea-content"></div>
+                    <div class="idea">
+                        <h3>Unklarheit bei der Berufswahl</h3>
+                        <p>Die Intention unseres Projektes ist es, die Unsicherheiten und Unklarheiten bei der Berufswahl herauszufinden und Jugendlichen Lösungsansätze für diese Unklarheiten zu bieten.</p>
+                    </div>
+                    <div class="idea">
+                        <h3>Kernproblem</h3>
+                        <p>Aus eigener Erfahrung wissen wir, dass eine genaue Vorstellung seiner Zukunft, gerade was den Beruf betrifft, schwierig zu bilden ist. Fragen wie: Was kann ich gut? Was macht mir Spaß? Was will ich machen? bekommen eine wichtige Rolle.</p>
+                    </div>
+                </div>
+                <div class="project-implementation">
+                    <div class="about-heading">
+                        <h3>Projektumsetzung</h3>
+                    </div>
+                    <div class="implementation-content">
+                        <div class="step">
+                            <h3>Umfrage</h3>
+                            <p>Umfrage an die Stufen Q1 und Q2 zur Ermittlung der aktuellen Probleme der Jugendlichen bei der Berufswahl.</p>
+                        </div>
+                        <div class="arrow"><i class="arrow-down"></i></div>
+                        <div class="step">
+                            <h3>Interview</h3>
+                            <p>Auseinandersetzung mit den Problemen in einem Gespräch mit dem Politiker Herrn Jarzombek. Ziel dieses Interviews ist es, Lösungsansätze für die Probleme der Jugendlichen bei der Berufswahl zu finden und zu diskutieren.</p>
+                        </div>
+                        <div class="arrow"><i class="arrow-down"></i></div>
+                        <div class="step">
+                            <h3>Auswertung</h3>
+                            <p>Für den Abschluss des Projektes werden die Ergebnisse der Umfrage und des Interviews mit Herrn Jarzombek ausgewertet und transparent für alle Schhülerinnen und Schüler auf dieser Webseite bereitgestellt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section partner">
+            <h2 class="section-heading white">Unser Partner</h2>
+
+            <div class="partner-content fade-in">
+                <div class="partner-information">
+                    <h3>Informationen</h3>
+                    <ul>
+                        <li>• 1993 Studium der Wirtschaftswissenschaften an der HHU Düsseldorf</li>
+                        <li>• 1996 Vordiplom und Gründung einer IT-Beratungsgesellschaft mit Sitz in Düsseldorf, dort bis 2013 geschäftsführender Gesellschafter und bis Ende 2017 Gesellschafter</li>
+                        <li>• Seit 2009 Mitglied des Deutschen Bundestages</li>
+                        <li>• 2017 bis 2021 Koordinator der Bundesregierung für Luft- und Raumfahrt</li>
+                        <li>• 2018 bis 2021 Beauftragter des Bundeswirtschaftsministeriums für digitale Wirtschaft und Startups</li>
+                        <li>• In der aktuellen Legislaturperiode Sprecher der CDU/CSU-Bundestagsfraktion für den Ausschuss Bildung, Forschung und Technikfolgenabschätzung und Mitglied im Ausschuss für Digitales</li>
+                        <li>• Weitere Informationen über Thomas Jarzombek gibt es auf seiner <a href="https://www.jarzombek.de/">Webseite</a></li>
+                    </ul>
+                </div>
+                <div class="partner-image">
+                    <img src="../../img/jarzombek.jpg" alt="Thomas Jarzombek">
+                </div>
+            </div>
+        </div>
+
+        <div class="section survey">
+            <h2 class="section-heading blue">Umfrage</h2>
+            <div class="center fade-in">
+                <div class="survery-image">
+                    <img src="../../img/survey.png" alt="Umfrage" id="survey-image">
+                    <div class="fading-container">
+                        <a href="survey.php">Zur gesamten Umfrage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section results">
+            <h2 class="section-heading white">Ergebnisse</h2>
+
+            <div class="container result-content">
+                <div class="result-information">
+                    <p>Wir treffen die Ergebnisse unserer Projektarbeit auf Grundlage des Gesprächs mit Herrn
+Thomas Jarzombek. Dabei greifen wir seine Ideen und Ansätze auf, arbeiten diese aus und
+denken sie weiter.</p>
+                </div>
+                <div class="result-cards">
+                    <div class="result-card fade-in" id="result-one">
+                        <div class="result-card-content">
+                            <div style="z-index: 1">
+                                <p>Als ersten Aspekt schlägt Herr Jarzombek eine Zusammenarbeit zwischen
+    den Schulen und der Wirtschaft vor. Eine solche Kooperation sei aufgrund des Arbeitskräftemangels auch für die Wirtschaft von Nutzen, 
+    weshalb sich z.B. die Chancen auf Schülerpraktika in verschiedenen Unternehmen langfristig erhöhen sollten. Damit möchte er bewirken, dass die SchülerInnen einen
+    direkten Zugang zu unterschiedlichen Berufsfeldern erlangen und einen konkreten Einblick in
+    verschiedene wirtschaftliche Bereiche erhalten. Ebenfalls werden den SchülerInnen erste
+    Kontaktpersonen in der wirtschaftlichen Berufswelt vermittelt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-card fade-in" id="result-two">
+                        <div class="result-card-content">
+                            <div style="z-index: 1">
+                                <p>Des Weiteren betont Herr Jarzombek, dass für einen zufriedenstellenden beruflichen
+    Einstieg jeglicher Art die Eigeninitiative und Initiative der Schule entscheidend sind. Daraus
+    folgern wir, dass es identitätsorientierte Programme für Jugendliche bedarf, die die Identität
+    Einzelner festigen und somit überhaupt die Grundlage für das Ergreifen einer Eigeninitiative legen. Dabei
+    spricht Herr Jarzombek auch ein erweitertes digitales Lernen an und stellt sich darunter vor,
+    dass mithilfe von digitalen Lernplattformen die Stärken und Schwächen einzelner
+    SchülerInnen detaillierter herausgearbeitet werden können und sie dadurch bei ihrer
+    Identitätsfindung unterstützt werden. Er betont jedoch, dass das Durchsetzen größerer
+    Bildungsreformen erfahrungsmäßig schwierig ist und räumt ein, dass es aufgrund der
+    nötigen Eigeninitiative von Seiten der SchülerInnen und Schulen zu
+    Ungleichheiten kommen könnte, die die gesellschaftliche Spaltung widerspiegelt.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-card fade-in" id="result-two">
+                        <div class="result-card-content">
+                            <div style="z-index: 1">
+                                <p>Um auch dieser Schieflage entgegenzuwirken, empfiehlt Herr Jarzombek abschließend, ein
+    Gesellschaftsjahr nach dem Abitur verpflichtend einzuführen. Er sieht dabei die Vorteile,
+    dass junge Menschen mit MitbürgerInnen aus verschiedensten Verhältnissen in Kontakt
+    kommen und auf diese Weise die Gesellschaft besser verstehen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="scroll-btn"><i class="fa-solid fa-chevron-down"></i></button>
+
+        <div class="footer">
+            <div class="text">
+                <p>Website by Robert, Max, Yoshua and Julius</p>
+            </div>
+        </div>
+
+
+        <script src="scripts.js"></script>
+        <script src="scroll.js"></script>
+
+        <script>
+            document.getElementById("project-collapsed").classList.add("active");
+            document.getElementById("project").classList.add("active");
+        </script>
+    </body>
+</html>

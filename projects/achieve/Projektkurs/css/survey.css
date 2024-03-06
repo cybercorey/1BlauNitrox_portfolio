@@ -1,0 +1,230 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-blue);
+    background-color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back i {
+    color: var(--primary-blue);
+    font-size: 20px;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.heading h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--primary-blue);
+}
+
+.heading h2::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background-color: var(--primary-blue);
+    width: 100%;
+}
+
+.dropdown-container {
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.dropbtn {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+}
+
+#dropdown-icon {
+    margin-left: 10px;
+}
+  
+.dropbtn:hover, .dropbtn:focus {
+    background-color: var(--secondary-blue);
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+  
+.dropdown a:hover {
+    background-color: #ddd;
+}
+  
+.show {
+    display: block;
+}
+
+.results {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    width: 80%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row:last-child {
+    margin-bottom: 100px;
+}
+
+.question {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 400px;
+}
+
+.question h4 {
+    padding: 0 50px;
+    margin-bottom: 15px;
+}
+
+.question-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-heading h4 {
+    margin: 0;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#scroll {
+    overflow-y: scroll;
+    max-height: 400px;
+    display: block;
+}
+
+#table-heading {
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(odd) {
+    background-color: var(--secondary-blue);
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    .row {
+        width: 100%;
+    }
+
+    .dropdown-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .question {
+        width: 60%;
+    }
+
+    .question:not(:last-child) {
+        margin-bottom: 80px;
+    }
+
+    .question h4 {
+        padding: 0;
+    }
+
+    .dropdown-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .question {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .question {
+        width: 95%;
+    }
+
+    .row:first-child {
+        margin-top: 40px;
+    }
+
+    .heading h2 {
+        font-size: 30px;
+    }
+}

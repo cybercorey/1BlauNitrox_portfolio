@@ -197,7 +197,17 @@ body {
 .landing-page-content-image img {
     height: 100%;
     border-radius: 27% 73% 31% 69% / 68% 27% 73% 32%;
-    animation: border 10s linear infinite;
+}
+
+.image-shadow {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 27% 73% 31% 69% / 68% 27% 73% 32%;
+    box-shadow: inset #fff 0px 0px 10px 0px;
 }
 
 .landing-page-content-buttons {
@@ -422,7 +432,7 @@ body {
 .about-me-image-container img {
     width: 100%;
     max-width: 500px;
-    border-radius: 30% 70% 37% 63% / 64% 10% 90% 36%;
+    border-radius: 30% 70% 37% 63% / 64% 17% 90% 36%;
 }
 
 
@@ -532,7 +542,8 @@ body {
 .project {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    align-items: center;
+    gap: 20px;
     width: 90%;
     margin: 0 auto;
 }
@@ -541,11 +552,44 @@ body {
     flex-direction: row-reverse !important;
 }
 
-.project-slider {
+.project-images {
+    position: relative;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 400px;
+}
+
+.project-images img {
+    width: 45%;
+    max-height: 200px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.project-images img:hover {
+    z-index: 3;
+    transform: scale(1.05);
+}
+
+.project-images img:nth-child(1) {
+    left: 3rem;
+    top: -2rem;
+}
+
+.project-images img:nth-child(2) {
+    right: 4rem;
+    top: 2rem;
+    z-index: 2;
+}
+
+.project-images img:nth-child(3) {
+    left: 20%;
+    top: 8rem;
 }
 
 .project-description {
@@ -565,8 +609,115 @@ body {
     color: #fff;
 }
 
-/* 1500px BREAK POINT
+@media screen and (max-width: 1700px) { 
+    .project {
+        width: 100%;
+    }  
+}
 
+@media screen and (max-width: 1450px) { 
+    .project {
+        flex-direction: column-reverse;
+    }  
+
+    .project-reverse {
+        flex-direction: column-reverse !important;
+    }
+
+    .project-images {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 80px;
+        min-height: 350px;
+    }
+
+    .project-description {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 720px) { 
+    .project-container {
+        gap: 50px;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .project-images img {
+        max-height: 170px;
+    }
+    
+    .project-images img:nth-child(1) {
+        left: 4rem;
+        top: -2rem;
+    }
+    
+    .project-images img:nth-child(2) {
+        right: 4rem;
+        top: 2rem;
+        z-index: 2;
+    }
+    
+    .project-images img:nth-child(3) {
+        left: 25%;
+        top: 6rem;
+    }
+}
+
+@media screen and (max-width: 650px) {  
+    .project-images img {
+        width: 50%;
+        max-height: 150px;
+    }
+
+    .project-images img:nth-child(1) {
+        left: 1rem;
+        top: -2rem;
+    }
+    
+    .project-images img:nth-child(2) {
+        right: 1rem;
+        top: 2rem;
+        z-index: 2;
+    }
+    
+    .project-images img:nth-child(3) {
+        left: 20%;
+        top: 6rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .project-container {
+        gap: 70px;
+    }
+
+    .project-images {
+        margin-top: 20px;
+        min-height: 250px;
+    }
+
+    .project-images img {
+        width: 55%;
+        max-width: 200px;
+        max-height: 120px;
+    }
+
+    .project-images img:nth-child(1) {
+        left: 2rem;
+        top: 0rem;
+    }
+    
+    .project-images img:nth-child(2) {
+        right: 2rem;
+        top: 2rem;
+        z-index: 2;
+    }
+    
+
+}
 
 /**  CONTACT */
 .contact-form {
@@ -752,7 +903,7 @@ body {
 }
 
 .paperplane-flying {
-    animation: flyOut 0.75s ease-in-out;
+    animation: flyOut 2s ease-in-out;
 }
 
 @keyframes flyOut {
@@ -761,12 +912,12 @@ body {
         transform: translate(0, 0);
     }
 
-    50% {
+    10% {
         opacity: 0;
         transform: translate(40px, -50px);
     }
 
-    51% {
+    80% {
         opacity: 0;
         transform: translate(-40px, 50px);
     }

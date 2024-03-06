@@ -1,0 +1,69 @@
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, var(--primary-blue), var(--secondary-blue)), url(../img/Projektkurs_TFG.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.heading {
+    position: absolute;
+    content: '';
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.heading h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.heading h3 {
+    font-size: 40px;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.data {
+    width: 70%;
+}
+
+.submit {
+    width: 15%;
+    background-color: rgb(100, 241, 100);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.data input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.error {
+    margin-top: 10px;
+}
+
+#error-text {
+    color: rgb(255, 40, 40);
+    font-size: 20px;
+}

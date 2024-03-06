@@ -1,0 +1,38 @@
+:root {
+    --primary-grey: #545454;
+    /* Text Grey */
+    --secondary-grey: rgb(238, 238, 238);
+    /* Background Grey*/
+    --tertiary-grey: #cccccc;
+    /* Collapsed Navigation Grey*/
+    /* Green */
+    --primary-red: #f27474;
+    /* Red */
+    --primary-blue: rgba(56, 54, 160, 0.8);
+    /* Blue */
+    --secondary-blue: rgba(129, 139, 230, 0.8);
+    /* Blue */
+    --tertiary-blue: rgba(66, 85, 253, 0.8);
+    /* Blue */
+    --font-Montserrat: 'Montserrat', sans-serif;
+    /* Montserrat Font */
+    --font-Poppins: 'Poppins', sans-serif;
+    /* Montserrat Font */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--primary-grey);
+    font-family: var(--font-Poppins);
+    background-color: var(--secondary-grey);
+    overflow-x: hidden;
+}

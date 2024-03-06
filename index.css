@@ -731,7 +731,7 @@ body {
     }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 480px) {
     .project-images img {
         width: 55%;
         max-width: 200px;

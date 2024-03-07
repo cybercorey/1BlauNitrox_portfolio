@@ -740,14 +740,17 @@ body {
     }
 
     .project-images img:nth-child(1) {
-        left: 0rem;
+        left: 1rem;
         top: 0rem;
     }
     
     .project-images img:nth-child(2) {
-        right: 2rem;
+        right: 1rem;
         top: 2rem;
         z-index: 2;
+    }
+    .project-images img:nth-child(3) {
+        left: 20%;
     }
 }
 

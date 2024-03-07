@@ -19,17 +19,14 @@ body {
     font-optical-sizing: auto;
 }
 
-.backgorund {
-    position: fixed;
-    top: 0;
-    left: 0;
+.container {
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(images/vecteezy_old-wood-texture-pattern-gray-white-tone-use-this-for_15233538.jpg);
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
+    background-color: #fff;
+    z-index: 2;
+    overflow: hidden;
 }
+
 
 /* For animation transition */
 .reveal {
@@ -98,16 +95,6 @@ body {
 .btn-outline-reverse:hover {
     background-color: #fff;
     color: rgb(103, 103, 255);
-}
-
-.container {
-    position: relative;
-    width: 95%;
-    margin: 20px 0;
-    background-color: #fff;
-    border-radius: 20px;
-    z-index: 2;
-    overflow: hidden;
 }
 
 .landing-page {
@@ -349,10 +336,6 @@ body {
 }
 
 @media screen and (max-width: 800px) { 
-    .backgorund {
-        display: none;
-    }
-
     .container {
         width: 100%;
         margin: 0;
@@ -711,7 +694,6 @@ body {
 @media screen and (max-width: 530px) {
     .project-images {
         margin-top: 20px;
-        min-height: 250px;
     }
 
     .project-images img {
@@ -747,7 +729,6 @@ body {
     .project-images img:nth-child(2) {
         right: 1rem;
         top: 2rem;
-        z-index: 2;
     }
     .project-images img:nth-child(3) {
         left: 20%;

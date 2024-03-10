@@ -68,7 +68,7 @@ function sendMail(name, email, content) {
     formData.append('email', email);
     formData.append('content', content);
 
-    const url = 'api/form-validation.php';
+    const url = 'api/form-validation.js';
 
     const options = {
         method: 'POST',
@@ -81,13 +81,13 @@ function sendMail(name, email, content) {
             if (!response.ok) {
                 formResponse.innerText = "Email could not be send"
                 formResponse.classList.remove("form-response-success");
-                formResponse.classList.add("form-respone-error");
+                formResponse.classList.add("form-response-error");
                 console.log(response);
                 throw new Error('Network response was not ok');
             }
             formResponse.innerText = "Email send successfully"
             formResponse.classList.add("form-response-success");
-            formResponse.classList.remove("form-respone-error");
+            formResponse.classList.remove("form-response-error");
             nameInput.value = "";
             emailInput.value = "";
             messageInput.value = "";

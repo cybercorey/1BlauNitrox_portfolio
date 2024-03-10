@@ -26,7 +26,7 @@ function formhash() {
     paperPlane.classList.add("paperplane-flying");
     setTimeout(function() {
         paperPlane.classList.remove("paperplane-flying");
-    }, 2000);
+    }, 500);
     sendMail(nameInput.value.trim(), emailInput.value.trim(), messageInput.value.trim());
 }
 

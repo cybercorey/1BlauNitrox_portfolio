@@ -6,6 +6,7 @@ const { Resend } = require('resend');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
+    console.log("whwudhwet");
   const { name, email, content } = req.body;
 
   // Initialize Resend client

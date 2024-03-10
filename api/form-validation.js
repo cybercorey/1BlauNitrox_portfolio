@@ -6,11 +6,15 @@ const { Resend } = require('resend');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-    console.log("whwudhwet");
   const { name, email, content } = req.body;
 
+  console.log('Received POST request to /api/form-validation');
+  console.log('Name:', name);
+  console.log('Email:', email);
+  console.log('Content:', content);
+
   // Initialize Resend client
-  const resend = new Resend(process.env.EMAIL_KEY);
+  const resend = new Resend('re_123456789');
 
   try {
     // Send email using Resend
@@ -26,10 +30,10 @@ router.post('/', async (req, res) => {
       return res.status(500).json({ error: 'Failed to send email' });
     }
 
-    console.log({ data });
+    console.log('Email sent successfully:', data);
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
-    console.error(error);
+    console.error('Error sending email:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

@@ -2,6 +2,7 @@ const paperPlane = document.getElementById("paperplane");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
+const formResponse = document.getElementById("form-response");
 
 function formhash() {
     let error = false;
@@ -26,7 +27,7 @@ function formhash() {
     setTimeout(function() {
         paperPlane.classList.remove("paperplane-flying");
     }, 2000);
-    return true;
+    sendMail(nameInput.value.trim(), emailInput.value.trim(), messageInput.value.trim());
 }
 
 function validateValue(element, identifier) {
@@ -56,6 +57,43 @@ function validateValue(element, identifier) {
         element.parentNode.classList.remove("error");
         return true; 
     }
+    
+    
+}
+
+function sendMail(name, email, content) {
+    const formData = new FormData();
+    
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('content', content);
+
+    const url = 'api/form-validation.php';
+
+    const options = {
+        method: 'POST',
+        body: formData
+    };
+
+    // Send the POST request to the backend
+    fetch(url, options)
+        .then(response => {
+            if (!response.ok) {
+                formResponse.innerText = "Email could not be send"
+                throw new Error('Network response was not ok');
+            }
+            formResponse.innerText = "Email send successfully"
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            return response;
+        })
+        .then(data => {
+            console.log('Response from backend:', data);
+        })
+        .catch(error => {
+            console.error('Error sending data to backend:', error);
+        });
 }
 
 function copyDiscord() {

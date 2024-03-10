@@ -53,6 +53,7 @@ body {
     text-decoration: none;
     width: fit-content;
     border: 1px solid rgb(103, 103, 255);
+    border-radius: 5px;
     transition: all 0.2s ease;
 }
 
@@ -921,6 +922,20 @@ body {
 .paperplane-flying {
     animation: flyOut 2s ease-in-out;
 }
+
+#form-response {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+#form-response.form-response-success {
+    color: green;
+}
+
+#form-response.form-response-error {
+    color: red;
+}
+
 
 @keyframes flyOut {
     0% {

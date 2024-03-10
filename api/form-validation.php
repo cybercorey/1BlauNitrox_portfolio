@@ -16,7 +16,7 @@ $name = "Test User";
 $user_mail = "julius.duesseldorf@web.de";
 $content = "jwehdg wehgd weghudwjhedb";
 
-$resend = Resend::client('re_Vu2zJ7qH_NxDK8zryUgh46X7V3iwoiiXM');
+$resend = Resend::client(getenv('EMAIL_KEY'));
 
 $resend->emails->send([
   'from' => $user_mail,

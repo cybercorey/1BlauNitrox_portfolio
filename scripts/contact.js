@@ -80,9 +80,14 @@ function sendMail(name, email, content) {
         .then(response => {
             if (!response.ok) {
                 formResponse.innerText = "Email could not be send"
+                formResponse.classList.remove("form-respone-success");
+                formResponse.classList.add("form-respone-error");
+                console.log(response);
                 throw new Error('Network response was not ok');
             }
             formResponse.innerText = "Email send successfully"
+            formResponse.classList.add("form-respone-success");
+            formResponse.classList.remove("form-respone-error");
             nameInput.value = "";
             emailInput.value = "";
             messageInput.value = "";

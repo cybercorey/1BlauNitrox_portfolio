@@ -201,7 +201,7 @@ body {
     top: 0;
     left: 0;
     border-radius: 27% 73% 31% 69% / 68% 27% 73% 32%;
-    box-shadow: inset #fff 0px 0px 10px 0px;
+    box-shadow: inset #fff 0px 0px 5px 0px;
 }
 
 .landing-page-content-buttons {

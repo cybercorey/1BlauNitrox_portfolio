@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
   console.log('Content:', content);
 
   // Initialize Resend client
-  const resend = new Resend('re_123456789');
+  const resend = new Resend(process.env.EMAIL_KEY);
 
   try {
     // Send email using Resend
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(405).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 

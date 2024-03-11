@@ -1,5 +1,5 @@
 <?php
-require_once "../vendor/autoload.php";
+require_once __DIR__ . '/../vendor/autoload.php';
 /*if(!isset($_POST['name'], $_POST['email'], $_POST['content'])) {
     header('Location: ../index.html');
     exit;

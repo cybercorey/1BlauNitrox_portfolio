@@ -68,7 +68,7 @@ function sendMail(name, email, content) {
     formData.append('email', email);
     formData.append('content', content);
 
-    const url = 'api/form-validation.js';
+    const url = 'api/mailer.php';
 
     const options = {
         method: 'POST',
